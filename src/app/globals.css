@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-poppins);
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+thead tr th,thead tr th * {
+  background-color: #294672!important;
+  color: #fff!important
+}
+
+table .text-success,h2.text-success {
+  color: #13bf94!important;
+  font-weight: 600
+}
+
+table .text-danger,h2.text-danger {
+  color: #e84d64!important;
+  font-weight: 600
+}
+
+thead tr th {
+  border-bottom: none!important
+}
+
+thead tr th:first-child {
+  border-top-left-radius: .4rem
+}
+
+thead tr th:last-child {
+  border-top-right-radius: .4rem
+}
+
+tbody tr td:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px
+}
+
+.fixed-header thead {
+  position: sticky;
+  /* top: 123px !important; */
+  z-index: 0;
+}
+.pagination-component .navigation-buttons-container span,
+.pagination-component select,
+.pagination-component span {
+  color: #112D61;
+  font-weight: 600;
+  padding: .225rem .625rem;
+  border-radius: .4rem;
+  transition: all .3s ease-in-out;
+}
+
+.pagination-component .navigation-buttons-container span {
+  background-color: whitesmoke;
+}
+
+.pagination-component .navigation-buttons-container span:hover,
+.pagination-component .navigation-buttons-container span.active {
+  background-color: #112D61;
+  color: #fff;
+}
+
+.pagination-component .navigation-buttons-container span.active {
+  scale: 1.1;
+}
+
+.pagination-component .navigation-buttons-container span:active {
+  scale: .9;
+}
+
+.pagination-component .navigation-buttons-container span.disabled {
+  background-color: #ffffff;
+  color: #6b6b6b;
+}
+div:has(>table) {
+  scroll-behavior: smooth;
+}
+
+div:has(>table)::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+div:has(>table)::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  width: 1px;
+  border-radius: 1rem;
+}
+
+div:has(>table)::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 1rem;
+}
+
+table::-webkit-scrollbar-thumb:hover,
+thead::-webkit-scrollbar-thumb:hover,
+tbody::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.stripe-lazy {
+  border: 1px solid white;
+  height: 20px;
+  background-color: #e6e6e6;
+}
+
+.stripe-lazy {
+  animation: Lazyloading 2s ease-in-out 0s infinite reverse;
+  -webkit-animation: Lazyloading 2s ease-in-out 0s infinite reverse;
+}
+@keyframes Lazyloading {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes Lazyloading {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
